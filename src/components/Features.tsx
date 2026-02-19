@@ -30,25 +30,25 @@ const FEATURE_ITEMS = [
 
 export const Features: React.FC = () => {
   return (
-    <section className="px-6 py-20 bg-white text-center md:px-12 max-w-7xl mx-auto">
+    <section className="px-6 py-20 bg-white text-center md:px-12 max-w-7xl mx-auto overflow-visible">
       <h2 className="text-4xl md:text-5xl font-black mb-16">Why Collab <br className="md:hidden" /> With us?</h2>
       
       <div className="relative mb-20 max-w-5xl mx-auto">
-        {/* Faded green glow - left */}
-        <div className="absolute -left-24 top-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-[#E2FF00] opacity-40 blur-[80px] -z-10" />
-        {/* Faded pinky-purple glow - right */}
-        <div className="absolute -right-24 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-[#E066FF] opacity-40 blur-[80px] -z-10" />
+        {/* Large faded lime glow - left, behind image */}
+        <div className="absolute -left-40 -bottom-20 w-[500px] h-[500px] rounded-full bg-[#E2FF00] opacity-50 blur-[100px] -z-10 pointer-events-none" />
+        {/* Large faded pink/purple glow - right bottom, behind image */}
+        <div className="absolute -right-32 -bottom-16 w-[420px] h-[420px] rounded-full bg-[#E066FF] opacity-45 blur-[100px] -z-10 pointer-events-none" />
 
         <img 
           src={featuresMain}
           alt="Collaborator" 
-          className="w-full rounded-[2.5rem] shadow-2xl aspect-video object-cover"
+          className="relative z-10 w-full rounded-[2.5rem] shadow-2xl aspect-video object-cover"
         />
         {/* Floating Icons */}
-        <div className="absolute -top-5 -right-3 md:-top-8 md:-right-6">
+        <div className="absolute -top-5 -right-3 md:-top-8 md:-right-6 z-20">
           <img src={lightningBadge} alt="Lightning" className="w-10 h-10 md:w-16 md:h-16" />
         </div>
-        <div className="absolute -bottom-5 -left-3 md:-bottom-8 md:-left-6">
+        <div className="absolute -bottom-5 -left-3 md:-bottom-8 md:-left-6 z-20">
           <img src={monkeyBadge} alt="Mad Monkey" className="w-14 h-14 md:w-20 md:h-20" />
         </div>
       </div>
