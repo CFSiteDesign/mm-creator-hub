@@ -30,7 +30,7 @@ const FEATURE_ITEMS = [
 
 export const Features: React.FC = () => {
   return (
-    <section className="px-6 py-20 bg-white text-center md:px-12 max-w-7xl mx-auto overflow-visible">
+    <section className="px-6 pt-8 pb-20 bg-white text-center md:px-12 max-w-7xl mx-auto overflow-visible">
       <h2 className="text-4xl md:text-5xl font-black mb-16">Why Collab <br className="md:hidden" /> With us?</h2>
       
       <div className="relative mb-20 max-w-5xl mx-auto">
