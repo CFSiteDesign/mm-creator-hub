@@ -1,7 +1,7 @@
 
 import React from 'react';
-import monkeyBadge from '@/assets/monkey-badge.jpg';
-import lightningBadge from '@/assets/lightning-badge.jpg';
+import monkeyBadge from '@/assets/monkey-badge.png';
+import lightningBadge from '@/assets/lightning-badge.png';
 import featuresMain from '@/assets/features-main.svg';
 
 const FEATURE_ITEMS = [
