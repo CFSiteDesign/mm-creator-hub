@@ -3,6 +3,8 @@ import React from 'react';
 import iconPitch from '@/assets/icon-pitch.png';
 import iconSetup from '@/assets/icon-setup.png';
 import iconPayday from '@/assets/icon-payday.png';
+import howItWorksHeart from '@/assets/howitworks-heart.png';
+import howItWorksPhoto from '@/assets/howitworks-photo.png';
 
 export const HowItWorks: React.FC = () => {
   return (
@@ -41,15 +43,15 @@ export const HowItWorks: React.FC = () => {
         </div>
 
         <div className="mt-16 lg:mt-0 lg:w-1/2 relative">
-          <div className="relative z-10">
+        <div className="relative z-10">
             <img 
-              src="https://picsum.photos/seed/party/800/1000" 
+              src={howItWorksPhoto}
               alt="Mad Monkey Vibe" 
-              className="rounded-3xl shadow-2xl w-full aspect-[4/5] object-cover"
+              className="rounded-3xl shadow-2xl w-full object-cover"
             />
-            {/* Pink heart blob */}
-            <div className="absolute -top-10 -right-6 bg-purple-400 p-6 rounded-full shadow-xl">
-              <span className="text-4xl">❤️</span>
+            {/* Heart badge */}
+            <div className="absolute -top-8 -right-6">
+              <img src={howItWorksHeart} alt="Heart" className="w-20 h-20 md:w-24 md:h-24" />
             </div>
           </div>
           {/* Background glow */}
