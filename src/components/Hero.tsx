@@ -29,7 +29,7 @@ export const Hero: React.FC<HeroProps> = ({ onApply }) => {
         </button>
       </div>
 
-      <div className="mt-12 lg:mt-0 lg:w-1/2 relative flex justify-center lg:justify-end">
+      <div className="mt-12 lg:mt-0 lg:w-1/2 relative flex justify-center lg:justify-start">
         {/* Video */}
         <video
           src={headerVideo}
@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onApply }) => {
           loop
           muted
           playsInline
-          className="rounded-3xl shadow-2xl w-full max-w-lg object-cover"
+          className="rounded-3xl w-full max-w-lg object-cover"
         />
         {/* Glow effects */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-radial from-lime-200/40 to-transparent blur-3xl -z-10" />
