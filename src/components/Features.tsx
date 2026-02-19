@@ -1,67 +1,60 @@
+
 import React from 'react';
 
-const features = [
+const FEATURE_ITEMS = [
   {
     icon: '💰',
-    title: 'Real Money, Real Fast',
-    desc: 'Brand deals, affiliate programs, and content bonuses — multiple income streams all in one hub.',
+    title: 'Passive Income',
+    subtitle: "We don't just give you a bed; we give you a business.",
+    desc: 'Get a custom affiliate link to share with your community. Every time they book using your link, you get a cut. No caps, no limits.'
   },
   {
-    icon: '🚀',
-    title: 'Turbo-Charge Your Growth',
-    desc: 'Access exclusive strategies, collab opportunities, and platform boosts that non-members never see.',
+    icon: '🏠',
+    title: 'Free Stays & Perks',
+    subtitle: 'From Bali to Bangkok, our hostels are your home.',
+    desc: 'Get 100% free accommodation, daily drink and food allowances, and "all-access" passes to the Mad Monkey experience.'
   },
   {
-    icon: '🎯',
-    title: 'Brand Deal Matching',
-    desc: "We connect you with brands that fit your niche and audience — you just create, we handle the pitch.",
-  },
-  {
-    icon: '🎓',
-    title: 'Creator Academy',
-    desc: 'Workshops, masterclasses, and 1-on-1 coaching from creators who are already killing it.',
-  },
-  {
-    icon: '🌏',
-    title: 'SEA Network',
-    desc: 'Join a tight-knit community of creators across Thailand, Indonesia, Vietnam, Philippines & more.',
-  },
-  {
-    icon: '📊',
-    title: 'Analytics Dashboard',
-    desc: 'Track your performance, earnings, and growth in real-time with our creator-first dashboard.',
-  },
+    icon: '📸',
+    title: 'Content that Converts',
+    subtitle: 'We provide the backdrop; you provide the lens.',
+    desc: 'Access our most iconic tours (boat parties, pub crawls, etc.) for free to help you capture the heat.'
+  }
 ];
 
 export const Features: React.FC = () => {
   return (
-    <section id="features" className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-primary font-black uppercase tracking-widest text-sm">Why Join?</span>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-foreground mt-2 leading-tight">
-            Everything a Creator Needs.
-            <br />
-            <span className="text-primary">Nothing They Don't.</span>
-          </h2>
-        </div>
+    <section className="px-6 py-20 bg-background text-center md:px-12 max-w-7xl mx-auto">
+      <h2 className="text-4xl md:text-5xl font-black mb-16 text-foreground">Why Collab <br className="md:hidden" /> With us?</h2>
+      
+      <div className="relative mb-20 max-w-5xl mx-auto">
+         <img 
+            src="https://images.unsplash.com/photo-1512100356956-c1227c324155?q=80&w=1200&auto=format&fit=crop" 
+            alt="Collaborator" 
+            className="w-full rounded-[2.5rem] shadow-2xl aspect-video object-cover"
+         />
+         {/* Floating Icons */}
+         <div className="absolute -top-6 -right-4 bg-purple-400 p-4 rounded-2xl shadow-lg rotate-12">
+           <span className="text-3xl">⚡️</span>
+         </div>
+         <div className="absolute -bottom-6 -left-4 bg-pink-400 p-4 rounded-2xl shadow-lg -rotate-12">
+           <span className="text-3xl">❤️</span>
+         </div>
+      </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, i) => (
-            <div
-              key={i}
-              className="group p-8 border-2 border-border rounded-2xl hover:border-primary hover:shadow-[0_0_30px_hsl(65_100%_50%/0.15)] transition-all duration-300"
-            >
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-black text-foreground mb-3 group-hover:text-primary transition-colors">
-                {feature.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">{feature.desc}</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+        {FEATURE_ITEMS.map((item, idx) => (
+          <div key={idx} className="flex flex-col items-center space-y-4">
+            <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center text-2xl shadow-md">
+              {item.icon}
             </div>
-          ))}
-        </div>
+            <h3 className="text-xl font-black text-foreground">{item.title}</h3>
+            <p className="text-pink-500 font-bold text-sm px-4 leading-tight">{item.subtitle}</p>
+            <p className="text-muted-foreground text-sm leading-relaxed px-2">
+              {item.desc}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );
