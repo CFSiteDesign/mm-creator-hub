@@ -42,11 +42,11 @@ export const Features: React.FC = () => {
           className="w-full rounded-[2.5rem] shadow-2xl aspect-video object-cover"
         />
         {/* Floating Icons */}
-        <div className="absolute -top-8 -right-6">
-          <img src={lightningBadge} alt="Lightning" className="w-16 h-16" />
+        <div className="absolute -top-5 -right-3 md:-top-8 md:-right-6">
+          <img src={lightningBadge} alt="Lightning" className="w-10 h-10 md:w-16 md:h-16" />
         </div>
-        <div className="absolute -bottom-8 -left-6">
-          <img src={monkeyBadge} alt="Mad Monkey" className="w-20 h-20" />
+        <div className="absolute -bottom-5 -left-3 md:-bottom-8 md:-left-6">
+          <img src={monkeyBadge} alt="Mad Monkey" className="w-14 h-14 md:w-20 md:h-20" />
         </div>
       </div>
 
