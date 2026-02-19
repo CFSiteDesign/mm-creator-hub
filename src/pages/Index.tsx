@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import testimonialsBg from '@/assets/testimonials-bg.jpg';
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { Features } from '@/components/Features';
@@ -25,8 +26,16 @@ const Index = () => {
         <HowItWorks />
         <Monetization onApply={toggleForm} />
         <ContentShowcase />
-        <CTASection onApply={toggleForm} />
-        <Testimonials onApply={toggleForm} />
+        <div
+          style={{
+            backgroundImage: `url(${testimonialsBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <CTASection onApply={toggleForm} />
+          <Testimonials onApply={toggleForm} />
+        </div>
         <FAQ />
       </main>
 

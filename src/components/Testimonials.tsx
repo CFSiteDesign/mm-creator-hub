@@ -39,7 +39,7 @@ const TESTIMONIALS = [
 
 export const Testimonials: React.FC<TestimonialsProps> = ({ onApply }) => {
   return (
-    <section className="px-6 py-24 text-center" style={{ backgroundImage: `url(${testimonialsBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section className="px-6 py-24 text-center">
       <div className="max-w-4xl mx-auto space-y-6 mb-16">
         <h2 className="text-4xl md:text-6xl font-black">Don't take <br />our word for it</h2>
         <p className="text-gray-700 font-bold text-sm leading-relaxed max-w-2xl mx-auto">
