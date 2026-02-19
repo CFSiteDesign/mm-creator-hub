@@ -1,5 +1,6 @@
 
 import React from 'react';
+import monetizationLightning from '@/assets/monetization-lightning.png';
 
 interface MonetizationProps {
   onApply: () => void;
@@ -56,8 +57,8 @@ export const Monetization: React.FC<MonetizationProps> = ({ onApply }) => {
                   <img src={card.mockup} alt="App Mockup" className="w-full h-full object-cover rounded-[1.8rem]" />
                 </div>
                 {idx === 2 && (
-                  <div className="absolute -top-4 -right-4 bg-purple-400 p-2 rounded-xl rotate-12 shadow-lg z-20">
-                    <span className="text-xl">⚡️</span>
+                  <div className="absolute -top-6 -right-6 z-20">
+                    <img src={monetizationLightning} alt="Lightning" className="w-14 h-14" />
                   </div>
                 )}
               </div>
