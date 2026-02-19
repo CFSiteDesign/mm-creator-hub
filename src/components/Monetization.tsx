@@ -32,7 +32,7 @@ const MONETIZE_CARDS = [
 
 export const Monetization: React.FC<MonetizationProps> = ({ onApply }) => {
   return (
-    <section className="px-6 py-24 bg-white">
+    <section className="px-6 pt-8 pb-16 bg-white">
       <div className="max-w-7xl mx-auto text-center space-y-8">
         <h2 className="text-4xl md:text-5xl font-black">Ways to monetise your content</h2>
         

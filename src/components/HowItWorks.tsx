@@ -8,7 +8,7 @@ import howItWorksPhoto from '@/assets/howitworks-photo.png';
 
 export const HowItWorks: React.FC = () => {
   return (
-    <section className="px-6 py-24 md:px-24 bg-white">
+    <section className="px-6 py-16 md:px-24 bg-white">
       <div className="lg:flex lg:items-center lg:gap-16 max-w-7xl mx-auto">
         <div className="lg:w-1/2 space-y-12">
           <h2 className="text-4xl md:text-5xl font-black">

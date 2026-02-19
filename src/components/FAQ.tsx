@@ -28,7 +28,7 @@ export const FAQ: React.FC = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(4);
 
   return (
-    <section className="px-6 py-24 bg-white relative overflow-hidden">
+    <section className="px-6 py-16 bg-white relative overflow-hidden">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-black text-center mb-16">Your Questions <br /> Answered</h2>
         
