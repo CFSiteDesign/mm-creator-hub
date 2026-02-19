@@ -13,23 +13,30 @@ const REELS: ReelItem[] = [
   { src: reel1, startAtHalf: false },
   { src: reel2, startAtHalf: false },
   { src: reel3, startAtHalf: false },
-  // Append unique fragment so browser treats these as separate media resources
-  { src: `${reel1}#half`, startAtHalf: true },
-  { src: `${reel2}#half`, startAtHalf: true },
-  { src: `${reel3}#half`, startAtHalf: true },
+  { src: reel1, startAtHalf: true },
+  { src: reel2, startAtHalf: true },
+  { src: reel3, startAtHalf: true },
 ];
 
 const ReelCard: React.FC<ReelItem> = ({ src, startAtHalf }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const hasSeekRef = useRef(false);
 
-  const handleSeek = () => {
+  const handleMetadata = () => {
     const video = videoRef.current;
-    if (!video || hasSeekRef.current || !startAtHalf) return;
-    if (video.duration) {
+    if (!video) return;
+    if (startAtHalf && !hasSeekRef.current && video.duration) {
       video.currentTime = video.duration / 2;
       hasSeekRef.current = true;
     }
+  };
+
+  // Manual loop to avoid white flash on native loop
+  const handleEnded = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.currentTime = startAtHalf ? video.duration / 2 : 0;
+    video.play();
   };
 
   return (
@@ -40,10 +47,10 @@ const ReelCard: React.FC<ReelItem> = ({ src, startAtHalf }) => {
           src={src}
           autoPlay
           muted
-          loop
           playsInline
-          onLoadedMetadata={handleSeek}
-          onCanPlay={handleSeek}
+          onLoadedMetadata={handleMetadata}
+          onCanPlay={handleMetadata}
+          onEnded={handleEnded}
           className="w-full h-full object-cover"
         />
       </div>
