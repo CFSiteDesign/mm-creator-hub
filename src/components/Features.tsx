@@ -3,22 +3,25 @@ import React from 'react';
 import monkeyBadge from '@/assets/monkey-badge.png';
 import lightningBadge from '@/assets/lightning-badge.png';
 import featuresMain from '@/assets/features-main.svg';
+import iconPassiveIncome from '@/assets/icon-passive-income.png';
+import iconFreeStays from '@/assets/icon-free-stays.png';
+import iconContent from '@/assets/icon-content.png';
 
 const FEATURE_ITEMS = [
   {
-    icon: '💰',
+    icon: iconPassiveIncome,
     title: 'Passive Income',
     subtitle: "We don't just give you a bed; we give you a business.",
     desc: 'Get a custom affiliate link to share with your community. Every time they book using your link, you get a cut. No caps, no limits.'
   },
   {
-    icon: '🏠',
+    icon: iconFreeStays,
     title: 'Free Stays & Perks',
     subtitle: 'From Bali to Bangkok, our hostels are your home.',
     desc: 'Get 100% free accommodation, daily drink and food allowances, and "all-access" passes to the Mad Monkey experience.'
   },
   {
-    icon: '📸',
+    icon: iconContent,
     title: 'Content that Converts',
     subtitle: 'We provide the backdrop; you provide the lens.',
     desc: 'Access our most iconic tours (boat parties, pub crawls, etc.) for free to help you capture the heat.'
@@ -53,8 +56,8 @@ export const Features: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
         {FEATURE_ITEMS.map((item, idx) => (
           <div key={idx} className="flex flex-col items-center space-y-4">
-            <div className="w-14 h-14 bg-[#E2FF00] rounded-2xl flex items-center justify-center text-2xl shadow-md">
-              {item.icon}
+            <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md overflow-hidden">
+              <img src={item.icon} alt={item.title} className="w-full h-full object-cover" />
             </div>
             <h3 className="text-xl font-black">{item.title}</h3>
             <p className="text-pink-500 font-bold text-sm px-4 leading-tight">{item.subtitle}</p>

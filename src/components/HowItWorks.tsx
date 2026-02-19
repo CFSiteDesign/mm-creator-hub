@@ -1,5 +1,8 @@
 
 import React from 'react';
+import iconPitch from '@/assets/icon-pitch.png';
+import iconSetup from '@/assets/icon-setup.png';
+import iconPayday from '@/assets/icon-payday.png';
 
 export const HowItWorks: React.FC = () => {
   return (
@@ -12,7 +15,7 @@ export const HowItWorks: React.FC = () => {
 
           <div className="space-y-10">
             <div className="space-y-3">
-              <div className="w-10 h-10 bg-lime-300 rounded-lg flex items-center justify-center text-lg">🔗</div>
+              <div className="w-10 h-10 rounded-lg overflow-hidden"><img src={iconPitch} alt="The Pitch" className="w-full h-full object-cover" /></div>
               <h3 className="text-lg font-bold">1. The Pitch <span className="text-pink-500 font-medium">(Join from anywhere)</span></h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Apply from your bedroom or the beach. We're looking for <span className="text-pink-400 font-bold">"main character"</span> energy and an aesthetic that hits. You don't need to be in SE Asia to start; if you can create travel hype from home, you're in.
@@ -20,7 +23,7 @@ export const HowItWorks: React.FC = () => {
             </div>
 
             <div className="space-y-3">
-              <div className="w-10 h-10 bg-lime-300 rounded-lg flex items-center justify-center text-lg">⛓️</div>
+              <div className="w-10 h-10 rounded-lg overflow-hidden"><img src={iconSetup} alt="The Setup" className="w-full h-full object-cover" /></div>
               <h3 className="text-lg font-bold">2. The Setup <span className="text-pink-500 font-medium">(Secure the Link)</span></h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Once accepted, we hook you up with your <span className="text-pink-400 font-bold underline">custom Mad Monkey link.</span> This is your digital goldmine. Put it in your bio, your link-tree, or your blog. Start earning before you even board your flight.
@@ -28,7 +31,7 @@ export const HowItWorks: React.FC = () => {
             </div>
 
             <div className="space-y-3">
-              <div className="w-10 h-10 bg-lime-300 rounded-lg flex items-center justify-center text-lg">💰</div>
+              <div className="w-10 h-10 rounded-lg overflow-hidden"><img src={iconPayday} alt="The Payday" className="w-full h-full object-cover" /></div>
               <h3 className="text-lg font-bold">3. The Payday <span className="text-pink-500 font-medium">(Post & Bank)</span></h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Create the heat! Reels, TikToks, or "how-to" guides. Use your link to drive bookings. <span className="text-pink-400 font-bold">We pay you a commission for every person who stays with us because of you.</span> Fund your next trip while you sleep in our bunks.
