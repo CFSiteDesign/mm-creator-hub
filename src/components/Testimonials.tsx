@@ -1,10 +1,12 @@
 
 import React from 'react';
 import testimonialsBg from '@/assets/testimonials-bg.jpg';
+import testimonialTeresa from '@/assets/testimonial-teresa.jpg';
 import testimonial1 from '@/assets/testimonial-1.jpg';
 import testimonial2 from '@/assets/testimonial-2.jpg';
 import testimonial3 from '@/assets/testimonial-3.jpg';
 import testimonial4 from '@/assets/testimonial-4.jpg';
+import testimonialJim from '@/assets/testimonial-jim.jpg';
 
 interface TestimonialsProps {
   onApply: () => void;
@@ -15,7 +17,7 @@ const TESTIMONIALS = [
     name: 'Teresa Mestre',
     handle: '@temestre',
     stats: '1.8K followers | Content Creator',
-    avatar: 'https://picsum.photos/seed/teresa/150/150',
+    avatar: testimonialTeresa,
     quote: "The Creator Hub let me travel Southeast Asia through a free creative exchange, surrounded by great people and unforgettable energy. It pushed me to try things I'd never done before and made long-term travel feel easy and exciting!"
   },
   {
@@ -50,7 +52,7 @@ const TESTIMONIALS = [
     name: 'Jim Jimenez',
     handle: '@jimjimenez',
     stats: '6.6K followers | Content Creator & Creative Director',
-    avatar: 'https://picsum.photos/seed/jimjimenez/150/150',
+    avatar: testimonialJim,
     quote: "I had an amazing time staying with Mad Monkey across ALL of Southeast Asia—everything from the amenities to the staff was top tier! Being able to exchange content for a free private stay while trying new experiences made it one of my favorite collaborations ever. If you're a creator and love to travel, Mad Monkey has the best creator program for you!"
   }
 ];
