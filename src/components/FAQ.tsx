@@ -4,19 +4,19 @@ import React, { useState } from 'react';
 const FAQ_ITEMS = [
   {
     q: "I'm a micro-influencer. Am I too small?",
-    a: "Absolutely not! We look for engagement and quality over just raw follower count. If your audience listens to you and your content aesthetic matches our brand, we want to hear from you."
+    a: "Size doesn't always matter—engagement does. If your 2,000 followers are obsessed with your travel tips, we want you."
   },
   {
     q: "Is it just free beds + tours?",
-    a: "It's way more. You get a dedicated affiliate portal to track bookings you drive, monthly creator newsletters with inside tips, and a community of like-minded travelers. The free stays are just the starting point."
+    a: "Usually, yes. But for \"Mega-Monkeys\" (500k+), we're open to discussing paid campaigns and long-term ambassadorships."
   },
   {
     q: "Do I have to be a party animal?",
-    a: "Mad Monkey is known for its social vibe, but we welcome all types of creators! Whether you're a foodie, an adventurer, or a digital nomad focusing on the 'work' side of the lifestyle, there's a place for you."
+    a: "You have to love the social vibe, but you don't have to go 100% every night. We just want you to capture the spirit of the community."
   },
   {
     q: "Can I bring a +1?",
-    a: "Collaborations are typically for individual creators, but for larger accounts or specific campaigns, we can often accommodate a content partner or +1. Just mention it in your application!"
+    a: "Everything is better with friends. Mention them in your application and we'll see if we can fit them in the bunk next to you."
   },
   {
     q: "I've applied! What's next?",
