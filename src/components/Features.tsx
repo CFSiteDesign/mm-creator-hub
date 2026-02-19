@@ -56,9 +56,7 @@ export const Features: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
         {FEATURE_ITEMS.map((item, idx) => (
           <div key={idx} className="flex flex-col items-center space-y-4">
-            <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md overflow-hidden">
-              <img src={item.icon} alt={item.title} className="w-full h-full object-cover" />
-            </div>
+            <img src={item.icon} alt={item.title} className="w-14 h-14 object-contain" />
             <h3 className="text-xl font-black">{item.title}</h3>
             <p className="text-pink-500 font-bold text-sm px-4 leading-tight">{item.subtitle}</p>
             <p className="text-gray-500 text-sm leading-relaxed px-2">
