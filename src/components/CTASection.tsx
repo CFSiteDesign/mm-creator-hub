@@ -7,7 +7,7 @@ interface CTAProps {
 
 export const CTASection: React.FC<CTAProps> = ({ onApply }) => {
   return (
-    <section className="px-6 py-20 bg-wavy-pattern">
+    <section className="px-6 py-20">
       <div className="max-w-6xl mx-auto bg-black rounded-[2.5rem] overflow-hidden relative shadow-2xl">
         <img 
           src="https://picsum.photos/seed/bali-falls/1600/900" 
