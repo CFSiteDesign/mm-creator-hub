@@ -1,99 +1,71 @@
+
 import React from 'react';
 
 interface TestimonialsProps {
   onApply: () => void;
 }
 
-const testimonials = [
+const TESTIMONIALS = [
   {
-    quote: "I went from 50K followers with zero brand deals to $8K/month in just 3 months. Mad Monkey changed everything.",
-    name: "Priya S.",
-    handle: "@priyalifestyle",
-    platform: "Instagram",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+    handle: '@nadineschoeller',
+    stats: '8.3k followers | Travel Blogger',
+    location: 'Mad Monkey Bangkok 🗼',
+    avatar: 'https://picsum.photos/seed/nadine/150/150',
+    quote: 'Mad Monkey made it possible to level up my videography while travelling on a budget. A free stay let me explore new places, try new things, and meet amazing people that turned into lifetime friends.'
   },
   {
-    quote: "The brand matching is insane. They connected me with 4 brands in my first week — all actually relevant to my audience.",
-    name: "Marcus T.",
-    handle: "@marcustechtalk",
-    platform: "YouTube",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+    handle: '@thearizaldo',
+    stats: '15k followers | Outdoor Enthusiast',
+    location: 'Mad Monkey Uluwatu 🏄',
+    avatar: 'https://picsum.photos/seed/ari/150/150',
+    quote: "I loved collaborating with Mad Monkey during my Bali trip! Mad Monkey Uluwatu was an absolute dream. I stayed for free in exchange for content, but it honestly didn't feel like work at all. From the beautiful hostel to the fun nightly events, it was a truly memorable Mad Monkey experience! IYKYK"
   },
   {
-    quote: "I was skeptical, but the Creator Academy workshops alone are worth it. I learned more in a month than in 2 years of solo creating.",
-    name: "Aisha N.",
-    handle: "@aisha.creates",
-    platform: "TikTok",
-    avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&h=100&fit=crop&crop=face",
+    handle: '@kaylabea',
+    stats: '20k followers | Culinary Explorer',
+    location: 'Mad Monkey Panglao 🏝️',
+    avatar: 'https://picsum.photos/seed/kayla/150/150',
+    quote: "Traveling through Southeast Asia with Mad Monkey was such an unreal experience—especially getting to try new things while staying in free private rooms through content exchanges. The staff were always so kind and welcoming, and the spaces were gorgeous every single time. If you're a creator who loves to explore, their creator program is seriously unmatched! ✨🏝️"
   },
   {
-    quote: "The community is fire. Real creators helping each other grow — not the fake guru BS you see everywhere else.",
-    name: "Leo K.",
-    handle: "@leokontent",
-    platform: "TikTok",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    quote: "Went from 0 to $22K in my first 6 months. The affiliate program alone covers my rent. Best decision I made.",
-    name: "Sofia R.",
-    handle: "@sofiabeautyth",
-    platform: "Instagram",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    quote: "Mad Monkey treats creators like actual business partners, not just influencers. That respect makes all the difference.",
-    name: "Danny W.",
-    handle: "@dannystreet",
-    platform: "YouTube",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
-  },
+    handle: '@scruff_brotherss',
+    stats: '20k followers | Culinary Explorer',
+    location: 'Mad Monkey Panglao 🏝️',
+    avatar: 'https://picsum.photos/seed/scruff/150/150',
+    quote: "Top notch experience at the Creator Hub programme, honestly buzzing. Couldn't believe the exchange was completely sorted for free and we tried so much new stuff, can't argue with that!"
+  }
 ];
 
 export const Testimonials: React.FC<TestimonialsProps> = ({ onApply }) => {
   return (
-    <section className="py-24 bg-muted">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="text-primary font-black uppercase tracking-widest text-sm">Creator Stories</span>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-foreground mt-2">
-            Don't Take Our Word.
-            <br />
-            <span className="text-primary">Take Theirs.</span>
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {testimonials.map((t, i) => (
-            <div
-              key={i}
-              className="bg-background p-6 rounded-2xl border-2 border-border hover:border-primary transition-all group"
-            >
-              <div className="text-3xl mb-4 text-primary">"</div>
-              <p className="text-foreground leading-relaxed mb-6 font-medium">{t.quote}</p>
-              <div className="flex items-center gap-3">
-                <img
-                  src={t.avatar}
-                  alt={t.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-primary"
-                />
-                <div>
-                  <div className="font-black text-foreground text-sm">{t.name}</div>
-                  <div className="text-muted-foreground text-xs">{t.handle} · {t.platform}</div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center">
-          <button
-            onClick={onApply}
-            className="px-10 py-4 bg-primary text-primary-foreground font-black text-lg rounded-full hover:bg-lime-dark transition-all hover:scale-105"
-          >
-            Write Your Own Success Story →
-          </button>
-        </div>
+    <section className="bg-wavy-pattern px-6 py-24 text-center">
+      <div className="max-w-4xl mx-auto space-y-6 mb-16">
+        <h2 className="text-4xl md:text-6xl font-black">Don't take <br />our word for it</h2>
+        <p className="text-gray-700 font-bold text-sm leading-relaxed max-w-2xl mx-auto">
+          We're biased, obviously. So we're letting our creator fam spill the tea on what it's actually like to live, work, and party at the Hub. No gatekeeping, just vibes.
+        </p>
       </div>
+
+      <div className="flex gap-6 overflow-x-auto pb-12 px-4 no-scrollbar snap-x snap-mandatory max-w-[100vw]">
+        {TESTIMONIALS.map((t, idx) => (
+          <div key={idx} className="flex-shrink-0 w-[300px] md:w-[350px] bg-white rounded-[2rem] p-8 snap-center shadow-lg border border-gray-100 flex flex-col items-center">
+            <img src={t.avatar} alt={t.handle} className="w-20 h-20 rounded-full object-cover mb-4 border-2 border-lime-300" />
+            <h4 className="font-black text-lg">{t.handle}</h4>
+            <p className="text-pink-500 font-bold text-[10px] uppercase tracking-tighter mb-1">{t.stats}</p>
+            <p className="text-gray-500 text-[10px] font-bold mb-6">{t.location}</p>
+            <p className="text-gray-600 text-[11px] leading-relaxed line-clamp-[10]">
+              {t.quote}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <button 
+        onClick={onApply}
+        className="mt-8 bg-white text-pink-500 px-10 py-3 rounded-md font-black text-[10px] uppercase tracking-widest shadow-xl hover:scale-105 transition-transform"
+      >
+        APPLY NOW
+      </button>
     </section>
   );
 };
