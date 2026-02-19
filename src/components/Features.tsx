@@ -1,6 +1,8 @@
 
 import React from 'react';
 import monkeyBadge from '@/assets/monkey-badge.svg';
+import lightningBadge from '@/assets/lightning-badge.svg';
+import featuresMain from '@/assets/features-main.svg';
 
 const FEATURE_ITEMS = [
   {
@@ -35,13 +37,13 @@ export const Features: React.FC = () => {
         <div className="absolute -right-24 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-[#E066FF] opacity-40 blur-[80px] -z-10" />
 
         <img 
-          src="https://images.unsplash.com/photo-1512100356956-c1227c324155?q=80&w=1200&auto=format&fit=crop" 
+          src={featuresMain}
           alt="Collaborator" 
           className="w-full rounded-[2.5rem] shadow-2xl aspect-video object-cover"
         />
         {/* Floating Icons */}
-        <div className="absolute -top-6 -right-4 bg-[#E066FF] p-4 rounded-full shadow-lg">
-          <span className="text-3xl">⚡️</span>
+        <div className="absolute -top-8 -right-6">
+          <img src={lightningBadge} alt="Lightning" className="w-16 h-16" />
         </div>
         <div className="absolute -bottom-8 -left-6">
           <img src={monkeyBadge} alt="Mad Monkey" className="w-20 h-20" />
