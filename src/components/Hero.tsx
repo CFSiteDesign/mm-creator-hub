@@ -30,21 +30,25 @@ export const Hero: React.FC<HeroProps> = ({ onApply }) => {
       <div className="mt-12 lg:mt-0 lg:w-1/2 relative flex justify-center lg:justify-end gap-4 md:gap-8">
         {/* Phone Mockups */}
         <div className="w-[180px] md:w-[240px] transform -rotate-6">
-          <div className="bg-black rounded-[2.5rem] p-3 shadow-2xl overflow-hidden aspect-[9/19]">
-            <img 
-              src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?q=80&w=800&auto=format&fit=crop" 
-              alt="Travel Content" 
-              className="w-full h-full object-cover rounded-[2rem]"
-            />
+          <div className="bg-black rounded-[2.5rem] p-3 shadow-2xl aspect-[9/19] relative">
+            <div className="absolute inset-3 rounded-[2rem] overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?q=80&w=800&auto=format&fit=crop" 
+                alt="Travel Content" 
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
           </div>
         </div>
         <div className="w-[180px] md:w-[240px] transform rotate-6 translate-y-8">
-          <div className="bg-black rounded-[2.5rem] p-3 shadow-2xl overflow-hidden aspect-[9/19]">
-            <img 
-              src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=800&auto=format&fit=crop" 
-              alt="Travel Content" 
-              className="w-full h-full object-cover rounded-[2rem]"
-            />
+          <div className="bg-black rounded-[2.5rem] p-3 shadow-2xl aspect-[9/19] relative">
+            <div className="absolute inset-3 rounded-[2rem] overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=800&auto=format&fit=crop" 
+                alt="Travel Content" 
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
           </div>
         </div>
         
