@@ -11,7 +11,7 @@ const REELS = [
 
 export const ContentShowcase: React.FC = () => {
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-16 bg-white overflow-hidden">
       <h2 className="text-4xl md:text-5xl font-black text-center mb-16 px-6">Content we'd actually watch</h2>
       
       <div className="flex gap-4 overflow-x-auto px-6 no-scrollbar snap-x snap-mandatory">
