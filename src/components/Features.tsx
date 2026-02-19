@@ -1,5 +1,6 @@
 
 import React from 'react';
+import monkeyBadge from '@/assets/monkey-badge.svg';
 
 const FEATURE_ITEMS = [
   {
@@ -42,8 +43,8 @@ export const Features: React.FC = () => {
         <div className="absolute -top-6 -right-4 bg-[#E066FF] p-4 rounded-full shadow-lg">
           <span className="text-3xl">⚡️</span>
         </div>
-        <div className="absolute -bottom-6 -left-4 bg-[#E066FF] p-4 rounded-full shadow-lg">
-          <span className="text-3xl">❤️</span>
+        <div className="absolute -bottom-8 -left-6">
+          <img src={monkeyBadge} alt="Mad Monkey" className="w-20 h-20" />
         </div>
       </div>
 
