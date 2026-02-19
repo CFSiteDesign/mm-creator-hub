@@ -1,5 +1,6 @@
 
 import React from 'react';
+import madMonkeyLogo from '@/assets/mad-monkey-logo.png';
 
 export const Footer: React.FC = () => {
   return (
@@ -7,11 +8,8 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Branding Column */}
         <div className="space-y-6">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-black">
-              <span className="text-xs">🐒</span>
-            </div>
-            <span className="font-extrabold text-xl tracking-tight">mad monkey</span>
+          <div className="flex items-center">
+            <img src={madMonkeyLogo} alt="Mad Monkey" className="h-10 w-auto brightness-0 invert" />
           </div>
           <div className="flex gap-4">
             <a href="#" className="hover:opacity-70 transition-opacity"><span className="text-xl">📸</span></a>
