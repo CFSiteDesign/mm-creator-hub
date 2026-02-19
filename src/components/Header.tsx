@@ -1,5 +1,6 @@
 
 import React from 'react';
+import madMonkeyLogo from '@/assets/mad-monkey-logo.png';
 
 interface HeaderProps {
   onApply: () => void;
@@ -8,11 +9,8 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ onApply }) => {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 px-6 py-4 md:px-12 flex items-center justify-between">
-      <div className="flex items-center gap-2">
-        <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-          <span className="text-white text-xs font-bold">🐒</span>
-        </div>
-        <span className="font-extrabold text-lg tracking-tight">mad monkey</span>
+      <div className="flex items-center">
+        <img src={madMonkeyLogo} alt="Mad Monkey" className="h-10 w-auto" />
       </div>
 
       <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
