@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import reel1 from '@/assets/reel-1.mp4';
 import reel2 from '@/assets/reel-2.mp4';
 import reel3 from '@/assets/reel-3.mp4';
@@ -13,31 +13,24 @@ const REELS: ReelItem[] = [
   { src: reel1, startAtHalf: false },
   { src: reel2, startAtHalf: false },
   { src: reel3, startAtHalf: false },
-  { src: reel1, startAtHalf: true },
-  { src: reel2, startAtHalf: true },
-  { src: reel3, startAtHalf: true },
+  // Append unique fragment so browser treats these as separate media resources
+  { src: `${reel1}#half`, startAtHalf: true },
+  { src: `${reel2}#half`, startAtHalf: true },
+  { src: `${reel3}#half`, startAtHalf: true },
 ];
 
 const ReelCard: React.FC<ReelItem> = ({ src, startAtHalf }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const hasSeekRef = useRef(false);
 
-  useEffect(() => {
+  const handleSeek = () => {
     const video = videoRef.current;
-    if (!video) return;
-
-    const handleLoaded = () => {
-      if (startAtHalf && video.duration) {
-        video.currentTime = video.duration / 2;
-      }
-    };
-
-    if (video.readyState >= 1) {
-      handleLoaded();
-    } else {
-      video.addEventListener('loadedmetadata', handleLoaded);
-      return () => video.removeEventListener('loadedmetadata', handleLoaded);
+    if (!video || hasSeekRef.current || !startAtHalf) return;
+    if (video.duration) {
+      video.currentTime = video.duration / 2;
+      hasSeekRef.current = true;
     }
-  }, [startAtHalf]);
+  };
 
   return (
     <div className="flex-shrink-0 w-64 md:w-72 snap-center">
@@ -49,6 +42,8 @@ const ReelCard: React.FC<ReelItem> = ({ src, startAtHalf }) => {
           muted
           loop
           playsInline
+          onLoadedMetadata={handleSeek}
+          onCanPlay={handleSeek}
           className="w-full h-full object-cover"
         />
       </div>
