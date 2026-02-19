@@ -43,19 +43,11 @@ export const HowItWorks: React.FC = () => {
         </div>
 
         <div className="mt-16 lg:mt-0 lg:w-1/2 relative">
-        <div className="relative z-10">
-            <img 
-              src={howItWorksPhoto}
-              alt="Mad Monkey Vibe" 
-              className="rounded-3xl shadow-2xl w-full object-cover"
-            />
-            {/* Heart badge */}
-            <div className="absolute -top-8 -right-6">
-              <img src={howItWorksHeart} alt="Heart" className="w-20 h-20 md:w-24 md:h-24" />
-            </div>
-          </div>
-          {/* Background glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-purple-200/20 blur-3xl -z-10 rounded-full" />
+          <img 
+            src={howItWorksPhoto}
+            alt="Mad Monkey Vibe" 
+            className="w-full object-cover"
+          />
         </div>
       </div>
     </section>
