@@ -1,5 +1,6 @@
 
 import React from 'react';
+import ctaBg from '@/assets/cta-bg.png';
 
 interface CTAProps {
   onApply: () => void;
@@ -10,7 +11,7 @@ export const CTASection: React.FC<CTAProps> = ({ onApply }) => {
     <section className="px-6 py-16">
       <div className="max-w-6xl mx-auto bg-black rounded-[2.5rem] overflow-hidden relative shadow-2xl">
         <img 
-          src="https://picsum.photos/seed/bali-falls/1600/900" 
+          src={ctaBg}
           alt="Waterfall Background" 
           className="w-full h-[400px] md:h-[600px] object-cover opacity-80"
         />
@@ -19,7 +20,7 @@ export const CTASection: React.FC<CTAProps> = ({ onApply }) => {
           <p className="text-lg md:text-xl font-bold mb-8">Applications take 2 minutes. We reply in 48 hours.</p>
           <button 
             onClick={onApply}
-            className="bg-[#E2FF00] text-black px-12 py-4 rounded-full font-black text-sm uppercase tracking-widest shadow-xl hover:scale-105 transition-transform"
+            className="bg-[#E2FF00] text-pink-500 px-12 py-4 rounded-full font-black text-sm uppercase tracking-widest shadow-xl hover:scale-105 transition-transform"
           >
             APPLY NOW
           </button>
