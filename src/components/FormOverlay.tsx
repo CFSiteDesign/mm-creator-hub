@@ -18,7 +18,7 @@ export const FormOverlay: React.FC<FormOverlayProps> = ({ onClose }) => {
         
         <div className="p-6 border-b flex items-center justify-between">
             <h2 className="text-2xl font-black">Creator Hub Application</h2>
-            <p className="text-gray-500 text-xs font-bold uppercase tracking-wider">Estimated time: 2 mins</p>
+            
         </div>
 
         <div className="flex-1 w-full bg-gray-50">
