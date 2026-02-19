@@ -141,8 +141,6 @@ export const Header: React.FC<HeaderProps> = ({ onApply }) => {
           <a href="https://madmonkeyhostels.com/mad-loyalty" target="_blank" rel="noopener noreferrer"
             className="hover:text-gray-500 transition-colors">Mad Loyalty</a>
 
-          <span className="text-gray-400 text-xs font-medium border border-gray-300 rounded px-2 py-0.5 cursor-default">USD | $</span>
-
           <span className="text-gray-300 select-none">|</span>
           <a href="https://madmonkeyhostels.com/login" target="_blank" rel="noopener noreferrer"
             className="hover:text-gray-500 transition-colors">Login</a>
