@@ -1,6 +1,9 @@
 
 import React from 'react';
 import monetizationLightning from '@/assets/monetization-lightning.png';
+import mockupCustomLinks from '@/assets/mockup-custom-links.png';
+import mockupCreatorNews from '@/assets/mockup-creator-news.png';
+import mockupInsideAccess from '@/assets/mockup-inside-access.png';
 
 interface MonetizationProps {
   onApply: () => void;
@@ -12,21 +15,21 @@ const MONETIZE_CARDS = [
     highlight: "You'll get paid commission when someone you send us makes a booking on our website",
     desc: 'Create custom links for destination pages, tours and experiences that you want to highlight!',
     bg: 'bg-pink-100',
-    mockup: 'https://picsum.photos/seed/mock1/300/600'
+    mockup: mockupCustomLinks
   },
   {
     title: 'Creator News',
     highlight: 'Know which hostels are trending and which spots are about to blow up',
     desc: 'We will send the tea straight to your inbox each month. Time your content perfectly to hit the peak booking wave.',
     bg: 'bg-lime-50',
-    mockup: 'https://picsum.photos/seed/mock2/300/600'
+    mockup: mockupCreatorNews
   },
   {
     title: 'Inside Access',
     highlight: 'Get first dibs on new openings, revamped tours, and secret Hub updates',
     desc: 'Feature the latest locations before they hit the mainstream.',
     bg: 'bg-indigo-50',
-    mockup: 'https://picsum.photos/seed/mock3/300/600'
+    mockup: mockupInsideAccess
   }
 ];
 
@@ -52,10 +55,8 @@ export const Monetization: React.FC<MonetizationProps> = ({ onApply }) => {
                 <p className="text-gray-500 text-xs leading-relaxed">{card.desc}</p>
               </div>
               
-              <div className="w-full max-w-[200px] mt-4 relative">
-                <div className="bg-black rounded-[2rem] p-2 aspect-[9/18] shadow-2xl overflow-hidden">
-                  <img src={card.mockup} alt="App Mockup" className="w-full h-full object-cover rounded-[1.8rem]" />
-                </div>
+              <div className="w-full max-w-[220px] mt-4 relative">
+                <img src={card.mockup} alt={card.title} className="w-full h-auto object-contain drop-shadow-xl" />
                 {idx === 2 && (
                   <div className="absolute -top-6 -right-6 z-20">
                     <img src={monetizationLightning} alt="Lightning" className="w-14 h-14" />
