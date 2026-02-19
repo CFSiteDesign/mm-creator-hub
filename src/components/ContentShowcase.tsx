@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from 'react';
 import reel1 from '@/assets/reel-1.mp4';
 import reel2 from '@/assets/reel-2.mp4';
 import reel3 from '@/assets/reel-3.mp4';
-import reel4 from '@/assets/reel-4.mp4';
 
 interface ReelItem {
   src: string;
@@ -14,11 +13,9 @@ const REELS: ReelItem[] = [
   { src: reel1, startAtHalf: false },
   { src: reel2, startAtHalf: false },
   { src: reel3, startAtHalf: false },
-  { src: reel4, startAtHalf: false },
   { src: reel1, startAtHalf: true },
   { src: reel2, startAtHalf: true },
   { src: reel3, startAtHalf: true },
-  { src: reel4, startAtHalf: true },
 ];
 
 const ReelCard: React.FC<ReelItem> = ({ src, startAtHalf }) => {
