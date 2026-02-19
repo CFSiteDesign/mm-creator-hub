@@ -74,80 +74,95 @@ export const Header: React.FC<HeaderProps> = ({ onApply }) => {
   const experience = useDropdown();
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100 px-6 py-3 md:px-10 flex items-center justify-between">
-      <div className="flex items-center gap-2">
-        <img src={madMonkeyLogo} alt="Mad Monkey" className="h-10 w-auto" />
-        <span className="font-black text-base leading-tight text-gray-900 hidden sm:block">mad<br/>monkey</span>
+    <div className="sticky top-0 z-50">
+      {/* Top announcement banner */}
+      <div className="bg-black text-white text-center text-xs py-2 px-4 font-medium">
+        Students get 15% off —{' '}
+        <a href="https://madmonkeyhostels.com/student-discount" target="_blank" rel="noopener noreferrer"
+          className="text-[#48CBB6] font-bold underline hover:text-[#3db8a5] transition-colors">
+          Claim your discount!
+        </a>
       </div>
 
-      <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-800">
-        <a href="https://madmonkeyhostels.com/madpass" target="_blank" rel="noopener noreferrer"
-          className="flex items-center gap-1 text-purple-600 font-bold hover:text-purple-700 transition-colors">
-          MadPass <span className="text-yellow-400 text-xs">✦</span>
-        </a>
-        <a href="https://madmonkeyhostels.com/our-story" target="_blank" rel="noopener noreferrer"
-          className="hover:text-gray-500 transition-colors">Our Story</a>
+      {/* Main header */}
+      <header className="bg-white border-b border-gray-100 px-6 py-3 md:px-10 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <img src={madMonkeyLogo} alt="Mad Monkey" className="h-10 w-auto" />
+          <span className="font-bold text-base leading-tight text-gray-900 hidden sm:block">mad<br/>monkey</span>
+        </div>
 
-        {/* Sleep Dropdown */}
-        <div className="relative" ref={sleep.ref}>
-          <button
-            onClick={() => { sleep.setOpen(!sleep.open); experience.setOpen(false); }}
-            className="flex items-center gap-1 hover:text-gray-500 transition-colors"
-          >
-            Sleep <span className="text-[10px] ml-0.5">▾</span>
-          </button>
-          {sleep.open && (
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[520px] bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 p-6">
-              <div className="grid grid-cols-3 gap-x-8 gap-y-1">
-                {SLEEP_LINKS.map((group) => (
-                  <div key={group.country} className="mb-3">
-                    <p className="text-[10px] font-black tracking-widest text-gray-400 uppercase mb-1.5">{group.country}</p>
-                    {group.items.map((item) => (
-                      <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer"
-                        className="block text-sm text-gray-700 hover:text-[#48CBB6] py-0.5 transition-colors">
-                        {item.label}
-                      </a>
-                    ))}
-                  </div>
+        <nav className="hidden lg:flex items-center gap-5 text-sm font-medium text-gray-800">
+          <a href="https://madmonkeyhostels.com/ha-giang-loop/" target="_blank" rel="noopener noreferrer"
+            className="border border-[#48CBB6] text-[#48CBB6] px-3 py-1 rounded-full text-xs font-semibold hover:bg-[#48CBB6] hover:text-white transition-all">
+            Ha Giang Loop
+          </a>
+          <a href="https://madmonkeyhostels.com/our-story" target="_blank" rel="noopener noreferrer"
+            className="hover:text-gray-500 transition-colors">Our Story</a>
+
+          {/* Sleep Dropdown */}
+          <div className="relative" ref={sleep.ref}>
+            <button
+              onClick={() => { sleep.setOpen(!sleep.open); experience.setOpen(false); }}
+              className="flex items-center gap-1 hover:text-gray-500 transition-colors"
+            >
+              Sleep <span className="text-[10px] ml-0.5">▾</span>
+            </button>
+            {sleep.open && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[520px] bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 p-6">
+                <div className="grid grid-cols-3 gap-x-8 gap-y-1">
+                  {SLEEP_LINKS.map((group) => (
+                    <div key={group.country} className="mb-3">
+                      <p className="text-[10px] font-black tracking-widest text-gray-400 uppercase mb-1.5">{group.country}</p>
+                      {group.items.map((item) => (
+                        <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer"
+                          className="block text-sm text-gray-700 hover:text-[#48CBB6] py-0.5 transition-colors">
+                          {item.label}
+                        </a>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Experience Dropdown */}
+          <div className="relative" ref={experience.ref}>
+            <button
+              onClick={() => { experience.setOpen(!experience.open); sleep.setOpen(false); }}
+              className="flex items-center gap-1 hover:text-gray-500 transition-colors"
+            >
+              Experience <span className="text-[10px] ml-0.5">▾</span>
+            </button>
+            {experience.open && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-52 bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 p-3">
+                {EXPERIENCE_LINKS.map((item) => (
+                  <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer"
+                    className="block px-3 py-2 text-sm text-gray-700 hover:text-[#48CBB6] hover:bg-gray-50 rounded-lg transition-colors">
+                    {item.label}
+                  </a>
                 ))}
               </div>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
 
-        {/* Experience Dropdown */}
-        <div className="relative" ref={experience.ref}>
-          <button
-            onClick={() => { experience.setOpen(!experience.open); sleep.setOpen(false); }}
-            className="flex items-center gap-1 hover:text-gray-500 transition-colors"
-          >
-            Experience <span className="text-[10px] ml-0.5">▾</span>
-          </button>
-          {experience.open && (
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-52 bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 p-3">
-              {EXPERIENCE_LINKS.map((item) => (
-                <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer"
-                  className="block px-3 py-2 text-sm text-gray-700 hover:text-[#48CBB6] hover:bg-gray-50 rounded-lg transition-colors">
-                  {item.label}
-                </a>
-              ))}
-            </div>
-          )}
-        </div>
+          <a href="https://madmonkeyhostels.com/mad-loyalty" target="_blank" rel="noopener noreferrer"
+            className="hover:text-gray-500 transition-colors">Mad Loyalty</a>
 
-        <a href="https://madmonkeyhostels.com/mad-loyalty" target="_blank" rel="noopener noreferrer"
-          className="hover:text-gray-500 transition-colors">Mad Loyalty</a>
-        <span className="text-gray-300 select-none">|</span>
-        <a href="https://madmonkeyhostels.com/login" target="_blank" rel="noopener noreferrer"
-          className="hover:text-gray-500 transition-colors">Login</a>
-      </nav>
+          <span className="text-gray-400 text-xs font-medium border border-gray-300 rounded px-2 py-0.5 cursor-default">USD | $</span>
 
-      <button
-        onClick={onApply}
-        className="bg-[#48CBB6] text-white px-5 py-2.5 rounded-lg text-sm font-bold shadow-sm hover:bg-[#3db8a5] transition-all flex items-center gap-1.5"
-      >
-        BOOK NOW <span className="text-[10px]">▾</span>
-      </button>
-    </header>
+          <span className="text-gray-300 select-none">|</span>
+          <a href="https://madmonkeyhostels.com/login" target="_blank" rel="noopener noreferrer"
+            className="hover:text-gray-500 transition-colors">Login</a>
+        </nav>
+
+        <button
+          onClick={onApply}
+          className="bg-[#48CBB6] text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-sm hover:bg-[#3db8a5] transition-all"
+        >
+          Book Now
+        </button>
+      </header>
+    </div>
   );
 };
