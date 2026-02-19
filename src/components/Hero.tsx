@@ -9,7 +9,7 @@ export const Hero: React.FC<HeroProps> = ({ onApply }) => {
   return (
     <section className="relative px-6 pt-16 pb-24 md:px-12 md:pt-24 lg:flex lg:items-center lg:gap-12 lg:min-h-[80vh]">
       <div className="lg:w-1/2 space-y-6">
-        <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
+        <h1 className="text-5xl md:text-7xl font-semibold leading-[1.1] tracking-tight">
           The dream job, <br />
           <span className="text-black">Unlocked</span>
         </h1>
