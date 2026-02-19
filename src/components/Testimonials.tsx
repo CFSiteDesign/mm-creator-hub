@@ -1,6 +1,10 @@
 
 import React from 'react';
 import testimonialsBg from '@/assets/testimonials-bg.jpg';
+import testimonial1 from '@/assets/testimonial-1.jpg';
+import testimonial2 from '@/assets/testimonial-2.jpg';
+import testimonial3 from '@/assets/testimonial-3.jpg';
+import testimonial4 from '@/assets/testimonial-4.jpg';
 
 interface TestimonialsProps {
   onApply: () => void;
@@ -11,28 +15,28 @@ const TESTIMONIALS = [
     handle: '@nadineschoeller',
     stats: '8.3k followers | Travel Blogger',
     location: 'Mad Monkey Bangkok 🗼',
-    avatar: 'https://picsum.photos/seed/nadine/150/150',
+    avatar: testimonial1,
     quote: 'Mad Monkey made it possible to level up my videography while travelling on a budget. A free stay let me explore new places, try new things, and meet amazing people that turned into lifetime friends.'
   },
   {
     handle: '@thearizaldo',
     stats: '15k followers | Outdoor Enthusiast',
     location: 'Mad Monkey Uluwatu 🏄',
-    avatar: 'https://picsum.photos/seed/ari/150/150',
+    avatar: testimonial2,
     quote: "I loved collaborating with Mad Monkey during my Bali trip! Mad Monkey Uluwatu was an absolute dream. I stayed for free in exchange for content, but it honestly didn't feel like work at all. From the beautiful hostel to the fun nightly events, it was a truly memorable Mad Monkey experience! IYKYK"
   },
   {
     handle: '@kaylabea',
     stats: '20k followers | Culinary Explorer',
     location: 'Mad Monkey Panglao 🏝️',
-    avatar: 'https://picsum.photos/seed/kayla/150/150',
+    avatar: testimonial3,
     quote: "Traveling through Southeast Asia with Mad Monkey was such an unreal experience—especially getting to try new things while staying in free private rooms through content exchanges. The staff were always so kind and welcoming, and the spaces were gorgeous every single time. If you're a creator who loves to explore, their creator program is seriously unmatched! ✨🏝️"
   },
   {
     handle: '@scruff_brotherss',
     stats: '20k followers | Culinary Explorer',
     location: 'Mad Monkey Panglao 🏝️',
-    avatar: 'https://picsum.photos/seed/scruff/150/150',
+    avatar: testimonial4,
     quote: "Top notch experience at the Creator Hub programme, honestly buzzing. Couldn't believe the exchange was completely sorted for free and we tried so much new stuff, can't argue with that!"
   }
 ];
