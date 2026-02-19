@@ -1,75 +1,61 @@
+
 import React, { useState } from 'react';
 
-const faqs = [
+const FAQ_ITEMS = [
   {
-    q: 'Who can apply to the Mad Monkey Creator Hub?',
-    a: "Anyone creating content on TikTok, Instagram, YouTube, Facebook, or any major platform. We consider all niches and follower counts — we look for quality over quantity. Micro-creators (5K+ followers) are absolutely welcome.",
+    q: "I'm a micro-influencer. Am I too small?",
+    a: "Absolutely not! We look for engagement and quality over just raw follower count. If your audience listens to you and your content aesthetic matches our brand, we want to hear from you."
   },
   {
-    q: 'Is there a fee to join?',
-    a: 'Zero. Joining the Mad Monkey Creator Hub is completely free. We make money when you make money through brand deal commissions — so our incentives are perfectly aligned with yours.',
+    q: "Is it just free beds + tours?",
+    a: "It's way more. You get a dedicated affiliate portal to track bookings you drive, monthly creator newsletters with inside tips, and a community of like-minded travelers. The free stays are just the starting point."
   },
   {
-    q: 'How quickly can I start earning?',
-    a: "Most creators receive their first brand deal opportunity within 1-2 weeks of being accepted. Some creators land their first deal within days. It depends on your niche, content quality, and current brand campaign availability.",
+    q: "Do I have to be a party animal?",
+    a: "Mad Monkey is known for its social vibe, but we welcome all types of creators! Whether you're a foodie, an adventurer, or a digital nomad focusing on the 'work' side of the lifestyle, there's a place for you."
   },
   {
-    q: 'What countries do you operate in?',
-    a: 'We currently operate across Southeast Asia including Thailand, Indonesia, Vietnam, Philippines, Malaysia, and Singapore. We are expanding into other markets in 2025.',
+    q: "Can I bring a +1?",
+    a: "Collaborations are typically for individual creators, but for larger accounts or specific campaigns, we can often accommodate a content partner or +1. Just mention it in your application!"
   },
   {
-    q: 'Do I need to post exclusively for Mad Monkey brands?',
-    a: "No. You keep full creative freedom and can work with other brands independently. We simply provide additional opportunities on top of what you already do. However, some campaigns may require exclusivity for specific periods.",
-  },
-  {
-    q: 'How does payment work?',
-    a: 'Payments are made monthly via bank transfer, PayPal, or local payment apps. You receive a detailed breakdown of earnings from each brand deal, affiliate commission, and bonus through your creator dashboard.',
-  },
-  {
-    q: "What if I'm just starting out?",
-    a: "We love early-stage creators with potential! If you have fewer followers but exceptional content quality or a highly engaged niche audience, we encourage you to apply. Our Creator Academy is designed to help early-stage creators grow fast.",
-  },
+    q: "I've applied! What's next?",
+    a: "Get ready to pack your bags (or your digital toolkit). Here is the roadmap:<br/><br/><b>If you're joining us as a Hosted Creator:</b><br/>1. <b>Date Check:</b> You'll get an email to submit your travel dates.<br/>2. <b>Vibe Check:</b> Our (human) team reviews your style.<br/>3. <b>The Intro:</b> A quick chat to talk about content vibes and say hello.<br/>4. <b>The Itinerary:</b> We send the details; you head to paradise.<br/>5. <b>The Legacy:</b> Gain access to Tapfiliate and our Creator News to keep earning long after you've checked out.<br/><br/><b>If you're joining us as a Digital Creator:</b> Simply register via Tapfiliate through the link in the email. Once our team gives you the green light, you'll get your unique link and our monthly Creator News. Whether you're creating from your bedroom or a beach club, you're officially part of the inner circle."
+  }
 ];
 
 export const FAQ: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIdx, setOpenIdx] = useState<number | null>(4);
 
   return (
-    <section id="faq" className="py-24 bg-background">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="text-primary font-black uppercase tracking-widest text-sm">Got Questions?</span>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-foreground mt-2">
-            We've Got Answers.
-          </h2>
-        </div>
-
-        <div className="flex flex-col gap-3">
-          {faqs.map((faq, i) => (
-            <div
-              key={i}
-              className="border-2 border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-colors"
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-6 text-left"
+    <section className="px-6 py-24 bg-white relative overflow-hidden">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-black text-center mb-16">Your Questions <br /> Answered</h2>
+        
+        <div className="space-y-4">
+          {FAQ_ITEMS.map((item, idx) => (
+            <div key={idx} className="border-b border-gray-100 pb-4">
+              <button 
+                onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
+                className="w-full flex items-center justify-between text-left py-4 group"
               >
-                <span className="font-bold text-foreground text-base sm:text-lg pr-4">{faq.q}</span>
-                <span className={`text-primary text-2xl font-black transition-transform flex-shrink-0 ${openIndex === i ? 'rotate-45' : ''}`}>
-                  +
+                <span className="text-lg font-bold group-hover:text-purple-600 transition-colors">{item.q}</span>
+                <span className={`text-purple-400 text-xl transform transition-transform ${openIdx === idx ? 'rotate-180' : ''}`}>
+                  {openIdx === idx ? '▲' : '▼'}
                 </span>
               </button>
-
-              {openIndex === i && (
-                <div className="px-6 pb-6">
-                  <div className="w-full h-px bg-border mb-4" />
-                  <p className="text-muted-foreground leading-relaxed">{faq.a}</p>
-                </div>
+              {openIdx === idx && (
+                <div 
+                  className="text-gray-500 text-sm leading-relaxed py-2 animate-fadeIn"
+                  dangerouslySetInnerHTML={{ __html: item.a }}
+                />
               )}
             </div>
           ))}
         </div>
       </div>
+      {/* Pink blob in background */}
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-100 rounded-full blur-[100px] -z-10 opacity-60" />
     </section>
   );
 };

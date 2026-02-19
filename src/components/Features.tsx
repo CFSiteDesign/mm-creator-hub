@@ -24,8 +24,8 @@ const FEATURE_ITEMS = [
 
 export const Features: React.FC = () => {
   return (
-    <section className="px-6 py-20 bg-background text-center md:px-12 max-w-7xl mx-auto">
-      <h2 className="text-4xl md:text-5xl font-black mb-16 text-foreground">Why Collab <br className="md:hidden" /> With us?</h2>
+    <section className="px-6 py-20 bg-white text-center md:px-12 max-w-7xl mx-auto">
+      <h2 className="text-4xl md:text-5xl font-black mb-16">Why Collab <br className="md:hidden" /> With us?</h2>
       
       <div className="relative mb-20 max-w-5xl mx-auto">
          <img 
@@ -33,7 +33,7 @@ export const Features: React.FC = () => {
             alt="Collaborator" 
             className="w-full rounded-[2.5rem] shadow-2xl aspect-video object-cover"
          />
-         {/* Floating Icons */}
+         {/* Floating Icons from Figma */}
          <div className="absolute -top-6 -right-4 bg-purple-400 p-4 rounded-2xl shadow-lg rotate-12">
            <span className="text-3xl">⚡️</span>
          </div>
@@ -45,12 +45,12 @@ export const Features: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
         {FEATURE_ITEMS.map((item, idx) => (
           <div key={idx} className="flex flex-col items-center space-y-4">
-            <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center text-2xl shadow-md">
+            <div className="w-14 h-14 bg-[#E2FF00] rounded-2xl flex items-center justify-center text-2xl shadow-md">
               {item.icon}
             </div>
-            <h3 className="text-xl font-black text-foreground">{item.title}</h3>
+            <h3 className="text-xl font-black">{item.title}</h3>
             <p className="text-pink-500 font-bold text-sm px-4 leading-tight">{item.subtitle}</p>
-            <p className="text-muted-foreground text-sm leading-relaxed px-2">
+            <p className="text-gray-500 text-sm leading-relaxed px-2">
               {item.desc}
             </p>
           </div>

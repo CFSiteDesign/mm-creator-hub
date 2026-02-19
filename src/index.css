@@ -115,6 +115,13 @@
   background-repeat: repeat;
 }
 
+.bg-wavy-pattern {
+  background-color: #f9f9f7;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='40' viewBox='0 0 80 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 Q 20 0 40 20 T 80 20' fill='none' stroke='%23e8e8e0' stroke-width='2'/%3E%3Cpath d='M0 30 Q 20 10 40 30 T 80 30' fill='none' stroke='%23e8e8e0' stroke-width='2'/%3E%3Cpath d='M0 10 Q 20 -10 40 10 T 80 10' fill='none' stroke='%23e8e8e0' stroke-width='2'/%3E%3C/svg%3E");
+  background-size: 80px 40px;
+  background-repeat: repeat;
+}
+
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
