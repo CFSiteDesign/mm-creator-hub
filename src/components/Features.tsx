@@ -28,18 +28,23 @@ export const Features: React.FC = () => {
       <h2 className="text-4xl md:text-5xl font-black mb-16">Why Collab <br className="md:hidden" /> With us?</h2>
       
       <div className="relative mb-20 max-w-5xl mx-auto">
-         <img 
-            src="https://images.unsplash.com/photo-1512100356956-c1227c324155?q=80&w=1200&auto=format&fit=crop" 
-            alt="Collaborator" 
-            className="w-full rounded-[2.5rem] shadow-2xl aspect-video object-cover"
-         />
-         {/* Floating Icons from Figma */}
-         <div className="absolute -top-6 -right-4 bg-purple-400 p-4 rounded-2xl shadow-lg rotate-12">
-           <span className="text-3xl">⚡️</span>
-         </div>
-         <div className="absolute -bottom-6 -left-4 bg-pink-400 p-4 rounded-2xl shadow-lg -rotate-12">
-           <span className="text-3xl">❤️</span>
-         </div>
+        {/* Faded green glow - left */}
+        <div className="absolute -left-24 top-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-[#E2FF00] opacity-40 blur-[80px] -z-10" />
+        {/* Faded pinky-purple glow - right */}
+        <div className="absolute -right-24 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-[#E066FF] opacity-40 blur-[80px] -z-10" />
+
+        <img 
+          src="https://images.unsplash.com/photo-1512100356956-c1227c324155?q=80&w=1200&auto=format&fit=crop" 
+          alt="Collaborator" 
+          className="w-full rounded-[2.5rem] shadow-2xl aspect-video object-cover"
+        />
+        {/* Floating Icons */}
+        <div className="absolute -top-6 -right-4 bg-[#E066FF] p-4 rounded-full shadow-lg">
+          <span className="text-3xl">⚡️</span>
+        </div>
+        <div className="absolute -bottom-6 -left-4 bg-[#E066FF] p-4 rounded-full shadow-lg">
+          <span className="text-3xl">❤️</span>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
