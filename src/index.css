@@ -99,8 +99,8 @@
     overflow-x: hidden;
   }
 
-  /* Bold & black weight elements use Playfair Display */
-  .font-bold, .font-extrabold, .font-black {
+  /* Headings use Playfair Display serif */
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
   }
 }
