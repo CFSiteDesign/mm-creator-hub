@@ -75,14 +75,6 @@ export const Header: React.FC<HeaderProps> = ({ onApply }) => {
 
   return (
     <div className="sticky top-0 z-50">
-      {/* Top announcement banner */}
-      <div className="bg-black text-white text-center text-xs py-2 px-4 font-medium">
-        Students get 15% off —{' '}
-        <a href="https://madmonkeyhostels.com/student-discount" target="_blank" rel="noopener noreferrer"
-          className="text-[#48CBB6] font-bold underline hover:text-[#3db8a5] transition-colors">
-          Claim your discount!
-        </a>
-      </div>
 
       {/* Main header */}
       <header className="bg-white border-b border-gray-100 px-6 py-3 md:px-10 flex items-center justify-between">
