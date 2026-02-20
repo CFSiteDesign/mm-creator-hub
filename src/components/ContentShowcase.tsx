@@ -27,7 +27,7 @@ const ReelCard: React.FC<ReelItem> = ({ src, trimEnd }) => {
   }, [trimEnd]);
 
   return (
-    <div className="flex-shrink-0 w-64 md:w-72 snap-center">
+    <div className="flex-shrink-0 w-64 md:w-72">
       <div className="rounded-3xl overflow-hidden shadow-lg aspect-[9/16] bg-black">
         <video
           ref={videoRef}
@@ -50,7 +50,7 @@ export const ContentShowcase: React.FC = () => {
     <section className="pt-16 pb-24 bg-white overflow-hidden">
       <h2 className="text-4xl md:text-5xl font-black text-center mb-16 px-6">Content we'd actually watch</h2>
       
-      <div className="flex gap-4 justify-center overflow-x-auto px-6 no-scrollbar snap-x snap-mandatory">
+      <div className="flex gap-4 justify-center flex-wrap px-6">
         {REELS.map((reel, idx) => (
           <ReelCard key={idx} {...reel} />
         ))}
