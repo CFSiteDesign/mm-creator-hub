@@ -27,7 +27,7 @@ const ReelCard: React.FC<ReelItem> = ({ src, trimEnd }) => {
   }, [trimEnd]);
 
   return (
-    <div className="flex-shrink-0 w-64 md:w-72">
+    <div className="w-full max-w-[200px] md:max-w-[240px]">
       <div className="rounded-3xl overflow-hidden shadow-lg aspect-[9/16] bg-black">
         <video
           ref={videoRef}
