@@ -47,10 +47,10 @@ const ReelCard: React.FC<ReelItem> = ({ src, trimEnd }) => {
 
 export const ContentShowcase: React.FC = () => {
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-16 md:pb-28 bg-white overflow-hidden">
       <h2 className="text-4xl md:text-5xl font-black text-center mb-16 px-6">Content we'd actually watch</h2>
       
-      <div className="flex gap-4 overflow-x-auto px-6 no-scrollbar snap-x snap-mandatory">
+      <div className="flex gap-4 overflow-x-auto px-6 no-scrollbar snap-x snap-mandatory justify-center">
         {REELS.map((reel, idx) => (
           <ReelCard key={idx} {...reel} />
         ))}
