@@ -29,11 +29,24 @@ const ReelCard: React.FC<ReelItem> = ({ src, startAtHalf }) => {
   };
 
   // Manual loop to avoid white flash on native loop
-  const handleEnded = () => {
+  const handleEnded = async () => {
     const video = videoRef.current;
     if (!video) return;
-    video.currentTime = startAtHalf ? video.duration / 2 : 0;
-    video.play();
+    try {
+      video.currentTime = 0;
+      await video.play();
+    } catch (e) {
+      console.error('Video replay error:', e);
+    }
+  };
+
+  // Also handle timeupdate as a fallback to prevent white frame
+  const handleTimeUpdate = () => {
+    const video = videoRef.current;
+    if (!video || !video.duration) return;
+    if (video.currentTime >= video.duration - 0.3) {
+      video.currentTime = 0;
+    }
   };
 
   return (
@@ -48,6 +61,7 @@ const ReelCard: React.FC<ReelItem> = ({ src, startAtHalf }) => {
           onLoadedMetadata={handleMetadata}
           onCanPlay={handleMetadata}
           onEnded={handleEnded}
+          onTimeUpdate={handleTimeUpdate}
           className="w-full h-full object-cover"
         />
       </div>
