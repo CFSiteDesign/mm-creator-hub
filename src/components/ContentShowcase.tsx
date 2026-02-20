@@ -1,5 +1,5 @@
 
-import React, { useRef } from 'react';
+import React from 'react';
 import reel1 from '@/assets/reel-1.mp4';
 import reel2 from '@/assets/reel-2.mp4';
 import reel3 from '@/assets/reel-3.mp4';
@@ -15,54 +15,19 @@ const REELS: ReelItem[] = [
   { src: reel3, startAtHalf: false },
 ];
 
-const ReelCard: React.FC<ReelItem> = ({ src, startAtHalf }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const hasSeekRef = useRef(false);
-
-  const handleMetadata = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    if (startAtHalf && !hasSeekRef.current && video.duration) {
-      video.currentTime = video.duration / 2;
-      hasSeekRef.current = true;
-    }
-  };
-
-  // Manual loop to avoid white flash on native loop
-  const handleEnded = async () => {
-    const video = videoRef.current;
-    if (!video) return;
-    try {
-      video.currentTime = 0;
-      await video.play();
-    } catch (e) {
-      console.error('Video replay error:', e);
-    }
-  };
-
-  // Also handle timeupdate as a fallback to prevent white frame
-  const handleTimeUpdate = () => {
-    const video = videoRef.current;
-    if (!video || !video.duration) return;
-    if (video.currentTime >= video.duration - 0.3) {
-      video.currentTime = 0;
-    }
-  };
-
+const ReelCard: React.FC<ReelItem> = ({ src }) => {
   return (
     <div className="flex-shrink-0 w-64 md:w-72 snap-center">
-      <div className="bg-gray-100 rounded-3xl overflow-hidden shadow-lg aspect-[9/16]">
+      <div className="rounded-3xl overflow-hidden shadow-lg aspect-[9/16] bg-black">
         <video
-          ref={videoRef}
           src={src}
           autoPlay
+          loop
           muted
           playsInline
-          onLoadedMetadata={handleMetadata}
-          onCanPlay={handleMetadata}
-          onEnded={handleEnded}
-          onTimeUpdate={handleTimeUpdate}
+          preload="auto"
           className="w-full h-full object-cover"
+          style={{ backgroundColor: 'black' }}
         />
       </div>
     </div>
