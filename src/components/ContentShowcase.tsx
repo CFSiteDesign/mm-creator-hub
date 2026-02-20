@@ -50,7 +50,7 @@ export const ContentShowcase: React.FC = () => {
     <section className="pt-16 pb-24 bg-white overflow-hidden">
       <h2 className="text-4xl md:text-5xl font-black text-center mb-16 px-6">Content we'd actually watch</h2>
       
-      <div className="flex gap-4 justify-center flex-wrap px-6">
+      <div className="flex gap-4 justify-center px-6">
         {REELS.map((reel, idx) => (
           <ReelCard key={idx} {...reel} />
         ))}
