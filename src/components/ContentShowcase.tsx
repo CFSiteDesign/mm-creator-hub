@@ -1,31 +1,43 @@
 
-import React from 'react';
+import React, { useRef, useCallback } from 'react';
 import reel1 from '@/assets/reel-1.mp4';
 import reel2 from '@/assets/reel-2.mp4';
 import reel3 from '@/assets/reel-3.mp4';
 
 interface ReelItem {
   src: string;
-  startAtHalf: boolean;
 }
 
+const TRIM_END = 3.5;
+
 const REELS: ReelItem[] = [
-  { src: reel1, startAtHalf: false },
-  { src: reel2, startAtHalf: false },
-  { src: reel3, startAtHalf: false },
+  { src: reel1 },
+  { src: reel2 },
+  { src: reel3 },
 ];
 
 const ReelCard: React.FC<ReelItem> = ({ src }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleTimeUpdate = useCallback(() => {
+    const video = videoRef.current;
+    if (!video || !video.duration) return;
+    if (video.currentTime >= video.duration - TRIM_END) {
+      video.currentTime = 0;
+    }
+  }, []);
+
   return (
     <div className="flex-shrink-0 w-64 md:w-72 snap-center">
       <div className="rounded-3xl overflow-hidden shadow-lg aspect-[9/16] bg-black">
         <video
+          ref={videoRef}
           src={src}
           autoPlay
-          loop
           muted
           playsInline
           preload="auto"
+          onTimeUpdate={handleTimeUpdate}
           className="w-full h-full object-cover"
           style={{ backgroundColor: 'black' }}
         />
