@@ -80,7 +80,6 @@ export const Header: React.FC<HeaderProps> = ({ onApply }) => {
       <header className="bg-white border-b border-gray-100 px-6 py-3 md:px-10 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img src={madMonkeyLogo} alt="Mad Monkey" className="h-10 w-auto" />
-          <span className="font-bold text-base leading-tight text-gray-900 hidden sm:block">mad<br/>monkey</span>
         </div>
 
         <nav className="hidden lg:flex items-center gap-5 text-sm font-medium text-gray-800">
