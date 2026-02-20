@@ -6,26 +6,25 @@ import reel3 from '@/assets/reel-3.mp4';
 
 interface ReelItem {
   src: string;
+  trimEnd: number;
 }
 
-const TRIM_END = 3.5;
-
 const REELS: ReelItem[] = [
-  { src: reel1 },
-  { src: reel2 },
-  { src: reel3 },
+  { src: reel1, trimEnd: 3.5 },
+  { src: reel2, trimEnd: 6 },
+  { src: reel3, trimEnd: 3.5 },
 ];
 
-const ReelCard: React.FC<ReelItem> = ({ src }) => {
+const ReelCard: React.FC<ReelItem> = ({ src, trimEnd }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleTimeUpdate = useCallback(() => {
     const video = videoRef.current;
     if (!video || !video.duration) return;
-    if (video.currentTime >= video.duration - TRIM_END) {
+    if (video.currentTime >= video.duration - trimEnd) {
       video.currentTime = 0;
     }
-  }, []);
+  }, [trimEnd]);
 
   return (
     <div className="flex-shrink-0 w-64 md:w-72 snap-center">
