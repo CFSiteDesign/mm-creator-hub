@@ -13,9 +13,6 @@ const REELS: ReelItem[] = [
   { src: reel1, startAtHalf: false },
   { src: reel2, startAtHalf: false },
   { src: reel3, startAtHalf: false },
-  { src: reel1, startAtHalf: true },
-  { src: reel2, startAtHalf: true },
-  { src: reel3, startAtHalf: true },
 ];
 
 const ReelCard: React.FC<ReelItem> = ({ src, startAtHalf }) => {
