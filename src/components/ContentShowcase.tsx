@@ -11,7 +11,7 @@ interface ReelItem {
 
 const REELS: ReelItem[] = [
   { src: reel1, trimEnd: 3.5 },
-  { src: reel2, trimEnd: 6 },
+  { src: reel2, trimEnd: 6.6 },
   { src: reel3, trimEnd: 3.5 },
 ];
 
