@@ -15,6 +15,7 @@ import { FormOverlay } from '@/components/FormOverlay';
 const Index = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const toggleForm = () => setIsFormOpen(!isFormOpen);
+  const handleApply = () => window.open('https://mm-influencer-hub.vercel.app', '_blank');
 
   return (
     <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
