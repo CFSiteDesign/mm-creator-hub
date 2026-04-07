@@ -19,13 +19,13 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
-      <Header onApply={handleApply} />
+      <Header onApply={toggleForm} />
 
       <main>
-        <Hero onApply={handleApply} />
+        <Hero onApply={toggleForm} />
         <Features />
         <HowItWorks />
-        <Monetization onApply={handleApply} />
+        <Monetization onApply={toggleForm} />
         <ContentShowcase />
         <div
           style={{
@@ -34,8 +34,8 @@ const Index = () => {
             backgroundPosition: 'center',
           }}
         >
-          <CTASection onApply={handleApply} />
-          <Testimonials onApply={handleApply} />
+          <CTASection onApply={toggleForm} />
+          <Testimonials onApply={toggleForm} />
         </div>
         <FAQ />
       </main>
