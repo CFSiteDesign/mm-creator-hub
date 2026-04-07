@@ -23,7 +23,7 @@ export const FormOverlay: React.FC<FormOverlayProps> = ({ onClose }) => {
 
         <div className="flex-1 w-full bg-gray-50">
           <iframe 
-            src="https://fill.boloforms.com/signature/form/creatorhub" 
+            src="https://mm-influencer-hub.vercel.app" 
             className="w-full h-full border-none"
             title="Mad Monkey Creator Hub Application Form"
           />
