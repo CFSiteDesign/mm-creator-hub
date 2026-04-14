@@ -25,9 +25,9 @@ const MONETIZE_CARDS = [
     mockup: mockupCreatorNews
   },
   {
-    title: 'Inside Access',
-    highlight: 'Get first dibs on new openings, revamped tours, and secret Hub updates',
-    desc: 'Feature the latest locations before they hit the mainstream.',
+    title: 'Revenue Tracker',
+    highlight: 'Track your earnings in real-time with our Creator Revenue dashboard',
+    desc: 'Check your commission earnings, view booking stats, and monitor your monthly revenue all in one place.',
     bg: 'bg-indigo-50',
     mockup: mockupInsideAccess
   }
