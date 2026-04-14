@@ -19,6 +19,10 @@ const FAQ_ITEMS = [
     a: "Everything is better with friends. Mention them in your application and we'll see if we can fit them in the bunk next to you."
   },
   {
+    q: "How do I track my earnings?",
+    a: "Simple! We've created a tracker for you. Once you are given your discount code and Unique ID number you can track all your bookings and revenue earned each month. <a href='https://madmonkeyhostels.com/creatorhub/revenue/admin' target='_blank' rel='noopener noreferrer' class='text-purple-600 underline hover:text-purple-800'>Track your earnings here</a>."
+  },
+  {
     q: "I've applied! What's next?",
     a: "Get ready to pack your bags (or your digital toolkit). Here is the roadmap:<br/><br/><b>If you're joining us as a Hosted Creator:</b><br/>1. <b>Date Check:</b> You'll get an email to submit your travel dates.<br/>2. <b>Vibe Check:</b> Our (human) team reviews your style.<br/>3. <b>The Intro:</b> A quick chat to talk about content vibes and say hello.<br/>4. <b>The Itinerary:</b> We send the details; you head to paradise.<br/>5. <b>The Legacy:</b> Gain access to Tapfiliate and our Creator News to keep earning long after you've checked out.<br/><br/><b>If you're joining us as a Digital Creator:</b> Simply register via Tapfiliate through the link in the email. Once our team gives you the green light, you'll get your unique link and our monthly Creator News. Whether you're creating from your bedroom or a beach club, you're officially part of the inner circle."
   }
