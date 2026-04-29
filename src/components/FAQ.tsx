@@ -20,7 +20,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "How do I track my earnings?",
-    a: "Simple! We've created a tracker for you. Once you are given your discount code and Unique ID number you can track all your bookings and revenue earned each month. <a href='https://madmonkeyhostels.com/creatorhub/revenue/admin' target='_blank' rel='noopener noreferrer' class='text-purple-600 underline hover:text-purple-800'>Mad Monkey Creator Dashboard – Track Your Commission</a>."
+    a: "Simple! We've created a tracker for you. Once you are given your discount code and Unique ID number you can track all your bookings and revenue earned each month. <a href='https://madmonkeyhostels.com/creatorhub/revenue/leaderboard' target='_blank' rel='noopener noreferrer' class='text-purple-600 underline hover:text-purple-800'>Track your earnings here</a>."
   },
   {
     q: "I've applied! What's next?",
