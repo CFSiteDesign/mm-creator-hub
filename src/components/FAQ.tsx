@@ -7,8 +7,8 @@ const FAQ_ITEMS = [
     a: "Size doesn't always matter—engagement does. If your 2,000 followers are obsessed with your travel tips, we want you."
   },
   {
-    q: "Is it just free beds + tours?",
-    a: "Usually, yes. But for \"Mega-Monkeys\" (500k+), we're open to discussing paid campaigns and long-term ambassadorships."
+    q: "Who are we looking for?",
+    a: "CreatorHub is all about creativity. If you're a content creator, photographer, videographer, DJ, or anything in between, we'd love to hear from you. Apply and we'll review your application."
   },
   {
     q: "Do I have to be a party animal?",
@@ -16,15 +16,15 @@ const FAQ_ITEMS = [
   },
   {
     q: "Can I bring a +1?",
-    a: "Everything is better with friends. Mention them in your application and we'll see if we can fit them in the bunk next to you."
+    a: "Yes. But unless your guest is a content creator and part of Creator Hub, a standard fee will apply."
   },
   {
     q: "How do I track my earnings?",
-    a: "Simple! We've created a tracker for you. Once you are given your discount code and Unique ID number you can track all your bookings and revenue earned each month. <a href='https://madmonkeyhostels.com/creatorhub/revenue/admin' target='_blank' rel='noopener noreferrer' class='text-purple-600 underline hover:text-purple-800'>Track your earnings here</a>."
+    a: "Simple! We've created a tracker for you. Once you are given your discount code and Unique ID number you can track all your bookings and revenue earned each month. <a href='https://madmonkeyhostels.com/creatorhub/revenue/admin' target='_blank' rel='noopener noreferrer' class='text-purple-600 underline hover:text-purple-800'>Mad Monkey Creator Dashboard – Track Your Commission</a>."
   },
   {
     q: "I've applied! What's next?",
-    a: "Get ready to pack your bags (or your digital toolkit). Here is the roadmap:<br/><br/><b>If you're joining us as a Hosted Creator:</b><br/>1. <b>Date Check:</b> You'll get an email to submit your travel dates.<br/>2. <b>Vibe Check:</b> Our (human) team reviews your style.<br/>3. <b>The Intro:</b> A quick chat to talk about content vibes and say hello.<br/>4. <b>The Itinerary:</b> We send the details; you head to paradise.<br/>5. <b>The Legacy:</b> Gain access to Tapfiliate and our Creator News to keep earning long after you've checked out.<br/><br/><b>If you're joining us as a Digital Creator:</b> Simply register via Tapfiliate through the link in the email. Once our team gives you the green light, you'll get your unique link and our monthly Creator News. Whether you're creating from your bedroom or a beach club, you're officially part of the inner circle."
+    a: "Get ready to pack your bags (or your digital toolkit). Here is the roadmap:<br/><br/><b>If you're joining us as a Hosted Creator:</b><br/>1. <b>Review:</b> Our (human) team reviews your style, content, and overall vibe.<br/>2. <b>Approval:</b> If successful, you'll receive your own personal promo code.<br/>3. <b>The Intro:</b> Our community team welcomes you into the CreatorHub.<br/>4. <b>Planning:</b> We'll lock in your stay dates and align on the content we're looking for.<br/>5. <b>The Legacy:</b> Get access to Creator news, stay in the loop with Mad Monkey, and keep earning long after your stay."
   }
 ];
 
