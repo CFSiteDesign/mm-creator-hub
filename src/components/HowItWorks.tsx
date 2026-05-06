@@ -36,7 +36,7 @@ export const HowItWorks: React.FC = () => {
               <img src={iconPayday} alt="The Payday" className="w-10 h-10 object-contain" />
               <h3 className="text-lg font-bold">3. The Payday <span className="text-pink-500 font-medium">(Post & Bank)</span></h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Create the heat! Reels, TikToks, or "how-to" guides. Use your link to drive bookings. <span className="text-pink-400 font-bold">We pay you a commission for every person who stays with us because of you.</span> Fund your next trip while you sleep in our bunks.
+                Create the heat! Reels, TikToks, or "how-to" guides. Use your Code to drive bookings. <span className="text-pink-400 font-bold">We pay you a commission for every person who stays with us because of you.</span> Fund your next trip while you sleep in our bunks.
               </p>
             </div>
           </div>
