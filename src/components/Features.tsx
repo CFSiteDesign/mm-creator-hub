@@ -6,6 +6,7 @@ import featuresMain from '@/assets/features-main.svg';
 import iconPassiveIncome from '@/assets/icon-passive-income.png';
 import iconFreeStays from '@/assets/icon-free-stays.png';
 import iconContent from '@/assets/icon-content.png';
+import iconPromoCode from '@/assets/icon-promo-code.png';
 
 const FEATURE_ITEMS = [
   {
@@ -13,6 +14,12 @@ const FEATURE_ITEMS = [
     title: 'Passive Income',
     subtitle: "We don't just give you a bed; we give you a business.",
     desc: 'Get a custom affiliate link to share with your community. Every time they book using your link, you get a cut. No caps, no limits.'
+  },
+  {
+    icon: iconPromoCode,
+    title: 'Personal Promo Code',
+    subtitle: 'Your code, your community, your cut.',
+    desc: 'Get a personal Promo Code to share with your community. Every time they book directly with us, you get a cut. No caps, no limits.'
   },
   {
     icon: iconFreeStays,
