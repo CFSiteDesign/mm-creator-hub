@@ -5,7 +5,7 @@ import madMonkeyLogo from '@/assets/mad-monkey-logo.png';
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white px-6 py-16 md:px-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-10">
 
         {/* Branding Column */}
         <div className="md:col-span-1 space-y-4">
