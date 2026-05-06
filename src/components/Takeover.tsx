@@ -8,15 +8,10 @@ export const Takeover: React.FC<TakeoverProps> = ({ onApply }) => {
   return (
     <section className="px-6 py-16 bg-white">
       <div className="max-w-6xl mx-auto bg-[#E2FF00] rounded-[2.5rem] overflow-hidden relative p-10 md:p-16">
-        {/* Decorative blurred glows */}
-        <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-[#E066FF] opacity-40 blur-3xl pointer-events-none" />
+        {/* Decorative blurred glow */}
         <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-[#FF6A00] opacity-40 blur-3xl pointer-events-none" />
 
         <div className="relative z-10 flex flex-col items-start gap-6 text-left">
-          <span className="bg-black text-[#E2FF00] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest">
-            Creator Takeover
-          </span>
-
           <h2 className="text-4xl md:text-6xl font-black text-black leading-[1.05]">
             Take it to the next level{' '}
             <span className="bg-black text-[#E2FF00] px-3 inline-block -skew-x-6">&amp; Takeover.</span>
