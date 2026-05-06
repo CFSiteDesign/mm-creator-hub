@@ -6,6 +6,7 @@ import featuresMain from '@/assets/features-main.svg';
 import iconPassiveIncome from '@/assets/icon-passive-income.png';
 import iconFreeStays from '@/assets/icon-free-stays.png';
 import iconContent from '@/assets/icon-content.png';
+import iconPromoCode from '@/assets/icon-promo-code.png';
 
 const FEATURE_ITEMS = [
   {
@@ -13,6 +14,12 @@ const FEATURE_ITEMS = [
     title: 'Passive Income',
     subtitle: "We don't just give you a bed; we give you a business.",
     desc: 'Get a custom affiliate link to share with your community. Every time they book using your link, you get a cut. No caps, no limits.'
+  },
+  {
+    icon: iconPromoCode,
+    title: 'Personal Promo Code',
+    subtitle: 'Your code, your community, your cut.',
+    desc: 'Get a personal Promo Code to share with your community. Every time they book directly with us, you get a cut. No caps, no limits.'
   },
   {
     icon: iconFreeStays,
@@ -53,7 +60,7 @@ export const Features: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
         {FEATURE_ITEMS.map((item, idx) => (
           <div key={idx} className="flex flex-col items-center space-y-4">
             <img src={item.icon} alt={item.title} className="w-14 h-14 object-contain" />
