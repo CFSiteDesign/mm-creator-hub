@@ -92,6 +92,23 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Guests */}
+        <div className="space-y-4">
+          <h5 className="font-bold text-sm mb-4">Guests</h5>
+          <div className="space-y-3">
+            <p className="text-[10px] font-bold text-white uppercase tracking-wider">Professional Conduct</p>
+            <p className="text-[10px] text-gray-400 leading-relaxed">
+              We have a zero-tolerance policy for harassment, illegal activity, or behavior that disrespects local cultures and our hostel communities.
+            </p>
+            <p className="text-[10px] text-gray-400 leading-relaxed">
+              <span className="text-gray-300 font-semibold">Internal Review:</span> Commercial Director reviews the claim against our Code of Conduct within 48 hours.
+            </p>
+            <p className="text-[10px] text-gray-400 leading-relaxed">
+              <span className="text-gray-300 font-semibold">Decision:</span> Depending on the severity, we trigger a "Strike" (warning), immediate contract termination, or a permanent blacklist from all Mad Monkey locations.
+            </p>
+          </div>
+        </div>
+
         {/* Guides */}
         <div>
           <h5 className="font-bold text-sm mb-4">Guides</h5>
