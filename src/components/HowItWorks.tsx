@@ -26,9 +26,9 @@ export const HowItWorks: React.FC = () => {
 
             <div className="space-y-3">
               <img src={iconSetup} alt="The Setup" className="w-10 h-10 object-contain" />
-              <h3 className="text-lg font-bold">2. The Setup <span className="text-pink-500 font-medium">(Secure the Link)</span></h3>
+              <h3 className="text-lg font-bold">2. The Setup <span className="text-pink-500 font-medium">(Secure Your Code)</span></h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Once accepted, we hook you up with your <span className="text-pink-400 font-bold underline">custom Mad Monkey link.</span> This is your digital goldmine. Put it in your bio, your link-tree, or your blog. Start earning before you even board your flight.
+                Once accepted, we hook you up with a <span className="text-pink-400 font-bold underline">personal promo code.</span> This is your digital goldmine. Put it in your bio, your link-tree, or your blog. Start earning before you even board your flight.
               </p>
             </div>
 
