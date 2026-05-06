@@ -13,7 +13,7 @@ const MONETIZE_CARDS = [
   {
     title: 'PROMO Codes',
     highlight: "You'll get paid commission when someone you send us makes a booking with your Promo code",
-    desc: 'Create custom links for destination pages, tours and experiences that you want to highlight!',
+    desc: "Accommodation or Tour? If it's booked directly through us, you earn!",
     bg: 'bg-pink-100',
     mockup: mockupCustomLinks
   },
