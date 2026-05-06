@@ -8,9 +8,9 @@ export const Takeover: React.FC<TakeoverProps> = ({ onApply }) => {
   return (
     <section className="px-6 py-16 bg-white">
       <div className="max-w-6xl mx-auto bg-[#E2FF00] rounded-[3.5rem] md:rounded-[5rem] overflow-hidden relative p-10 md:p-16">
-        {/* Pink corner gradients */}
-        <div className="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-[#E066FF] opacity-60 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-[#E066FF] opacity-60 blur-3xl pointer-events-none" />
+        {/* Pink corner gradients (kept inside to avoid hard clip on blur) */}
+        <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-[#E066FF] opacity-60 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 right-10 w-72 h-72 rounded-full bg-[#E066FF] opacity-60 blur-3xl pointer-events-none" />
 
         <div className="relative z-10 flex flex-col items-start gap-6 text-left">
           <h2 className="text-4xl md:text-6xl font-black text-black leading-[1.05]">
