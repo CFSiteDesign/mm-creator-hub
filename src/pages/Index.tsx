@@ -11,10 +11,14 @@ import { Testimonials } from '@/components/Testimonials';
 import { FAQ } from '@/components/FAQ';
 import { Footer } from '@/components/Footer';
 import { FormOverlay } from '@/components/FormOverlay';
+import { Takeover } from '@/components/Takeover';
+import { TakeoverFormOverlay } from '@/components/TakeoverFormOverlay';
 
 const Index = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isTakeoverFormOpen, setIsTakeoverFormOpen] = useState(false);
   const toggleForm = () => setIsFormOpen(!isFormOpen);
+  const toggleTakeoverForm = () => setIsTakeoverFormOpen(!isTakeoverFormOpen);
   const handleApply = () => window.open('https://mm-influencer-hub.vercel.app', '_blank');
 
   return (
@@ -37,12 +41,14 @@ const Index = () => {
           <CTASection onApply={toggleForm} />
           <Testimonials onApply={toggleForm} />
         </div>
+        <Takeover onApply={toggleTakeoverForm} />
         <FAQ />
       </main>
 
       <Footer />
 
       {isFormOpen && <FormOverlay onClose={toggleForm} />}
+      {isTakeoverFormOpen && <TakeoverFormOverlay onClose={toggleTakeoverForm} />}
     </div>
   );
 };
