@@ -8,8 +8,6 @@ export const Takeover: React.FC<TakeoverProps> = ({ onApply }) => {
   return (
     <section className="px-6 py-16 bg-white">
       <div className="max-w-6xl mx-auto bg-[#E2FF00] rounded-[2.5rem] overflow-hidden relative p-10 md:p-16">
-        {/* Decorative blurred glow */}
-        <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-[#FF6A00] opacity-40 blur-3xl pointer-events-none" />
 
         <div className="relative z-10 flex flex-col items-start gap-6 text-left">
           <h2 className="text-4xl md:text-6xl font-black text-black leading-[1.05]">
