@@ -60,7 +60,7 @@ export const Features: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
         {FEATURE_ITEMS.map((item, idx) => (
           <div key={idx} className="flex flex-col items-center space-y-4">
             <img src={item.icon} alt={item.title} className="w-14 h-14 object-contain" />
