@@ -24,6 +24,9 @@ export const Takeover: React.FC<TakeoverProps> = ({ onApply }) => {
           <p className="text-base md:text-lg text-white/80 max-w-2xl font-medium">
             Ever wanted to host your own group trip but had no idea where to start? Want to turn your following into a real community?
           </p>
+          <p className="text-base md:text-lg max-w-2xl font-bold text-[#E2FF00]">
+            The only creator travel platform where you keep the profit — because we own the hostels and tours. No middlemen.
+          </p>
           <button
             onClick={onApply}
             className="bg-[#FF6A00] text-white px-12 py-4 rounded-full font-black text-sm uppercase tracking-widest shadow-xl hover:scale-105 transition-transform"
