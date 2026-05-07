@@ -13,7 +13,7 @@ const FEATURE_ITEMS = [
     icon: iconPassiveIncome,
     title: 'Passive Income',
     subtitle: "We don't just give you a bed; we give you a business.",
-    desc: 'Get a custom affiliate link to share with your community. Every time they book using your link, you get a cut. No caps, no limits.'
+    desc: 'Get a Custom promo code to share with your community. Every time they book using your code, you get a cut. No caps, no limits.'
   },
   {
     icon: iconPromoCode,
