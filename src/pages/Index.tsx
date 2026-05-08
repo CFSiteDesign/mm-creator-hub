@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import testimonialsBg from '@/assets/testimonials-bg.jpg';
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
@@ -20,6 +20,15 @@ const Index = () => {
   const toggleForm = () => setIsFormOpen(!isFormOpen);
   const toggleTakeoverForm = () => setIsTakeoverFormOpen(!isTakeoverFormOpen);
   const handleApply = () => window.open('https://mm-influencer-hub.vercel.app', '_blank');
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.slice(1);
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, []);
 
   return (
     <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
