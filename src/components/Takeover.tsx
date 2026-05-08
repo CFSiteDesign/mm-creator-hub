@@ -6,7 +6,7 @@ interface TakeoverProps {
 
 export const Takeover: React.FC<TakeoverProps> = ({ onApply }) => {
   return (
-    <section className="px-6 py-16 bg-white">
+    <section id="takeover" className="px-6 py-16 bg-white scroll-mt-24">
       <div className="max-w-6xl mx-auto bg-[#E2FF00] rounded-[3.5rem] md:rounded-[5rem] overflow-hidden relative p-10 md:p-16">
         {/* Pink corner gradients (kept inside to avoid hard clip on blur) */}
         <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-[#E066FF] opacity-60 blur-3xl pointer-events-none" />
